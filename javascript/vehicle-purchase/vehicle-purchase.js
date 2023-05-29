@@ -11,11 +11,7 @@
  * @returns {boolean} whether a license is required
  */
 export function needsLicense(kind) {
-  if (kind === 'car' || kind === 'truck') {
-    return true;
-  } else {
-    return false;
-  };
+  return kind === 'car' || kind === 'truck';
 }
 
 /**
@@ -27,11 +23,7 @@ export function needsLicense(kind) {
  * @returns {string} a sentence of advice which option to choose
  */
 export function chooseVehicle(option1, option2) {
-  if (option1 < option2 == true) {
-    return option1 + ' is clearly the better choice.';
-  } else {
-    return option2 + ' is clearly the better choice.';
-  };
+  return (option1 < option2 ? option1 : option2) + ' is clearly the better choice.';
 }
 
 /**
